@@ -37,13 +37,11 @@ This should work on any Windows, OSX, or Linux box.
 ### Now, set up your project.
 
 1. Add this repository to yours.
-
 ```
 cd mysite
 
 git submodule add git@github.com:ShawnMcCool/vagrant-chef.git
 ```
-
 
 2. Update the submodules within the submodule. (inception)
 
@@ -59,10 +57,17 @@ cp vagrant-chef/vagrant/vagrantfiles/Vagrantfile .
 
 4. Read the Vagrant file and modify where appropriate for your project.
 
+```
+#   default hosts and synced folder location
+    /chef/data_bags/sites/default.json
+#   ip, server name, password, etc.
+    Vagrantfile
+```
+
 5. Add this entry to hosts file
 
 ```
-10.10.10.10 app.local
+10.10.10.10 app.local       
 ```
 
 # Workflow
